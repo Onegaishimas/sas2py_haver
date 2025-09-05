@@ -1,0 +1,79 @@
+# MANIFEST.in - Specifies additional files to include in distribution package
+
+# Documentation files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CLAUDE.md
+recursive-include docs *.md
+recursive-include docs *.rst
+recursive-include docs *.txt
+
+# Configuration files
+include requirements.txt
+include requirements-dev.txt
+include setup.py
+include pyproject.toml
+include tox.ini
+
+# Example files
+include extract_fed_data.py
+include Federal_Reserve_ETL_Interactive.ipynb
+recursive-include examples *.py
+recursive-include examples *.ipynb
+recursive-include examples *.json
+
+# Test files (for development installations)
+recursive-include tests *.py
+recursive-include tests *.json
+recursive-include tests *.yaml
+include conftest.py
+
+# Package data files
+recursive-include src/federal_reserve_etl/data *.json
+recursive-include src/federal_reserve_etl/data *.csv
+recursive-include src/federal_reserve_etl/config *.yaml
+recursive-include src/federal_reserve_etl/config *.ini
+recursive-include src/federal_reserve_etl/templates *.json
+recursive-include src/federal_reserve_etl/templates *.yaml
+
+# 0xcc framework documentation
+recursive-include 0xcc *.md
+
+# Exclude files that shouldn't be distributed
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.orig
+global-exclude *.rej
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude Thumbs.db
+
+# Exclude sensitive files
+exclude .env
+exclude .env.local
+exclude .env.*.local
+recursive-exclude * .env
+recursive-exclude * .env.*
+recursive-exclude logs *.log
+
+# Exclude build artifacts
+exclude build
+exclude dist
+exclude *.egg-info
+global-exclude *.so
+global-exclude *.dylib
+global-exclude *.dll
+
+# Exclude IDE files
+global-exclude .vscode
+global-exclude .idea
+global-exclude *.swp
+global-exclude *.swo
+global-exclude *~
+
+# Exclude temporary files
+global-exclude *.tmp
+global-exclude *.bak
+global-exclude *.backup

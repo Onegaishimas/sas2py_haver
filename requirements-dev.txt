@@ -1,0 +1,24 @@
+# Development dependencies for Federal Reserve ETL Pipeline
+# Install with: pip install -r requirements-dev.txt
+
+# Include core runtime dependencies
+-r requirements.txt
+
+# Testing framework and utilities
+pytest>=7.0.0,<8.0.0
+pytest-cov>=4.0.0,<5.0.0
+pytest-mock>=3.8.0,<4.0.0
+
+# Date/time mocking for reproducible testing
+freezegun>=1.2.0,<2.0.0
+
+# Code quality and formatting
+black>=23.0.0,<24.0.0
+flake8>=6.0.0,<7.0.0
+mypy>=1.0.0,<2.0.0
+
+# Pre-commit hooks for quality checks
+pre-commit>=3.0.0,<4.0.0
+
+# Development and debugging utilities
+ipdb>=0.13.0,<1.0.0

@@ -1,0 +1,11 @@
+# Core runtime dependencies for Federal Reserve ETL Pipeline
+# Based on ADR specifications for production-ready command-line tool
+
+# Data processing and manipulation
+pandas>=2.0.0,<3.0.0
+
+# HTTP client for API communication
+requests>=2.28.0,<3.0.0
+
+# Type hints compatibility for Python 3.8
+typing-extensions>=4.0.0; python_version<"3.10"
